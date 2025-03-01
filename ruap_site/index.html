@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Check if you can have a loan</h1>
+    <form action="#" method="POST">
+        <label for="person_age">Age :</label>
+        <input type="number" id="person_age" name="person_age" step="0.1" required>
+
+        <label for="person_gender">Gender:</label>
+        <select id="person_gender" name="person_gender" required>
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <label for="person_education">Education Level:</label>
+        <select id="person_education" name="person_education" required>
+            <option value="">Select</option>
+            <option value="High_school">High School</option>
+            <option value="Bachelor">Bachelor's</option>
+            <option value="Master">Master's</option>
+            <option value="Phd">PhD</option>
+            <option value="Associate">Associate</option>
+        </select>
+
+        <label for="person_income">Annual Income:</label>
+        <input type="number" id="person_income" name="person_income" step="0.01" required>
+
+        <label for="person_emp_exp">Years of Employment Experience:</label>
+        <input type="number" id="person_emp_exp" name="person_emp_exp" required>
+
+        <label for="person_home_ownership">Home Ownership Status:</label>
+        <select id="person_home_ownership" name="person_home_ownership" required>
+            <option value="">Select</option>
+            <option value="RENT">Rent</option>
+            <option value="OWN">Own</option>
+            <option value="MORTGAGE">Mortgage</option>
+        </select>
+
+        <label for="loan_amnt">Loan Amount Requested:</label>
+        <input type="number" id="loan_amnt" name="loan_amnt" step="0.01" required>
+
+        <label for="loan_intent">Purpose of the Loan:</label>
+        <select id="loan_intent" name="loan_intent" required>
+            <option value="">Select</option>
+            <option value="PERSONAL">Personal</option>
+            <option value="BUSSINESS">Business</option>
+            <option value="EDUCATION">Education</option>
+            <option value="MEDICAL">Medical</option>
+            <option value="VENTURE">Venture</option>
+            <option value="DEBT_CONSOLIDATION">Debt Consolidation</option>
+            <option value="HOME_IMPROVMENT">Home Improvement</option>
+        </select>
+
+        <label for="credit_score">Credit Score:</label>
+        <input type="number" id="credit_score" name="credit_score" required>
+
+        <label for="previous_loan_defaults_on_file">Did you have previous loan before ? </label>
+        <select id="previous_loan_defaults_on_file" name="previous_loan_defaults_on_file" required>
+            <option value="">Select</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="loanResultModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Loan Application Result</h2>
+            <p id="loanMessage"></p>
+        </div>
+    </div>
+
+
+</body>
+</html>
