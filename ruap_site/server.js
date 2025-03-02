@@ -11,6 +11,10 @@ const API_KEY = 'RX7TPG224ofJPSzdZgGfHacrTbb2cGHy';
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html')); 
+});
+
 app.post('/proxy', async (req, res) => {
     try {
         const response = await axios.post(AZURE_API_URL, req.body, {
